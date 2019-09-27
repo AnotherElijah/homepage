@@ -8,9 +8,6 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 function SideLogo(props) {
     return (
         <div className={props.className}>
-            <div className="sideLogo">
-                <h1>I.POLETAJEV</h1>
-            </div>
             <ReactCSSTransitionGroup
                 component={React.Fragment}
                 transitionName="logo-left-slide"
@@ -20,7 +17,7 @@ function SideLogo(props) {
                 transitionEnter={true}
                 transitionEnterTimeout={0}
                 transitionLeave={false}>
-                <div className="logoLeft"></div>
+                <img src={require('./img/logo-dark.svg')} alt=""/>
             </ReactCSSTransitionGroup>
         </div>
     )
@@ -28,8 +25,8 @@ function SideLogo(props) {
 
 function Introduction(props) {
     return (<div className={props.className}>
-            <h3>Hi, I am a web developer</h3>
-            <h3>from Tallinn, Estonia</h3>
+            <h3>Hello! My name is <span>Ilya</span>.</h3>
+            <h3>I am <span>web developer</span> based in <span>Tallinn, Estonia</span></h3>
         </div>
     )
 }
@@ -37,60 +34,126 @@ function Introduction(props) {
 class Home extends Component {
     constructor(props) {
         super(props);
-        this.state = ({position: "home"});
+        this.state = ({appState: "home"});
         this.setState = this.setState.bind(this);
-        this.liftState = this.liftState.bind(this);
+        this.setHomeState = this.setHomeState.bind(this);
+
     }
-    liftState(state_, lift) {
-        this.setState({position: state_});
+
+    setHomeState(state_, lift) {
+        this.setState({appState: state_})
     }
-    componentDidUpdate(prevProp, prevState) {/*попробовать вынести во внешний файл в обертке для переиспользования*/
+
+    componentDidUpdate(prevProp, prevState) {
         /*smoothly hides bg*/
-        if(this.refs._bg){
+        if (this.refs._bg) {
             const {_bg} = this.refs;
             _bg.classList.add("opacity");
         }
-        if(prevState.position!==this.state.position) {
+        if (prevState.appState !== this.state.appState) {
             setTimeout(
                 () => {
-                    this.props.changeState(this.state.position)
+                    this.props.setGeneralState(this.state.appState)
                 }, 1000
             );
         }
     }
+
+    componentDidMount() {
+        let {_bg} = this.refs;
+        if (!window.location.hash) {
+            document.body.onload = () => {
+                _bg.classList.remove("blur");
+            };
+        } else {
+            /*if user came from other section of website (body already loaded)*/
+            _bg.classList.remove("blur");
+        }
+
+    }
+
     render() {
         return (
-            <div className="main-wrapper" ref="_bg">
-                <ReactCSSTransitionGroup
-                    component={React.Fragment}
-                    transitionName="home-logo"
-                    transitionAppear={true}
-                    transitionAppearTimeout={300}
-                    transitionLeaveTimeout={1000}
-                    transitionEnter={false}
-                    transitionLeave={true}>
-                    {this.state.position === "home" ?
-                        <SideLogo
-                            className="sideLogo-wrapper"/>
-                        : null}
-                </ReactCSSTransitionGroup>
+            <div className="main-wrapper blur" ref="_bg">
 
-                <div className="main-section">
-                    <ReactCSSTransitionGroup
-                        component={React.Fragment}
-                        transitionName="main-section"
-                        transitionAppear={true}
-                        transitionAppearTimeout={500}
-                        transitionLeaveTimeout={0}
-                        transitionEnter={false}
-                        transitionLeave={true}>
-                        {this.state.position === "home" ?
-                            <div className="main-section-wrapper">
+
+                <div ref="bgBlur" className="main-section">
+                    <div className="main-section main-section__filter">
+                        <div className="main-section-wrapper">
+                            <ReactCSSTransitionGroup
+                                component={React.Fragment}
+                                transitionName="home-logo"
+                                transitionAppear={false}
+                                transitionAppearTimeout={300}
+                                transitionLeaveTimeout={1000}
+                                transitionEnter={false}
+                                transitionLeave={true}>
+                                {this.state.appState === "home" ?
+                                    <SideLogo
+                                        className="sideLogo-wrapper"/>
+                                    : null}
+                            </ReactCSSTransitionGroup>
+                            <ReactCSSTransitionGroup
+                                component={React.Fragment}
+                                transitionName="home-blocks-bottom-right"
+                                transitionAppear={false}
+                                transitionAppearTimeout={300}
+                                transitionLeaveTimeout={1000}
+                                transitionEnter={false}
+                                transitionLeave={true}>
+                                {this.state.appState === "home" ?
+                                    <div className="bottom-right-mosaicBlock">
+                                        <div className="mosaic-block-1"/>
+                                        <div className="mosaic-block-2"/>
+                                        <div className="mosaic-block-3"/>
+                                    </div> : null}
+                            </ReactCSSTransitionGroup>
+                            <ReactCSSTransitionGroup
+                                component={React.Fragment}
+                                transitionName="home-blocks-top-right"
+                                transitionAppear={false}
+                                transitionAppearTimeout={300}
+                                transitionLeaveTimeout={1000}
+                                transitionEnter={false}
+                                transitionLeave={true}>
+                                {this.state.appState === "home" &&
+                                <div className="top-right-mosaicBlock">
+                                    <div className="mosaic-block-4"/>
+                                    <div className="mosaic-block-5"/>
+                                    <div className="mosaic-block-6"/>
+                                    <div className="mosaic-block-7"/>
+                                    <div className="mosaic-block-8"/>
+                                    <div className="mosaic-block-9"/>
+                                </div>}
+                            </ReactCSSTransitionGroup>
+                            <ReactCSSTransitionGroup
+                                component={React.Fragment}
+                                transitionName="home-blocks-bottom-left"
+                                transitionAppear={false}
+                                transitionAppearTimeout={300}
+                                transitionLeaveTimeout={1000}
+                                transitionEnter={false}
+                                transitionLeave={true}>
+                                {this.state.appState === "home" &&
+                                <div className="bottom-left-mosaicBlock">
+                                    <div className="mosaic-block-10"/>
+                                    <div className="mosaic-block-11"/>
+                                    <div className="mosaic-block-12"/>
+                                    <div className="mosaic-block-13"/>
+                                    <div className="mosaic-block-14"/>
+                                    <div className="mosaic-block-15"/>
+                                    <div className="mosaic-block-16"/>
+                                </div>}
+                            </ReactCSSTransitionGroup>
+                            <main>
                                 <Introduction
                                     className="introduction"/>
-                                <Navigation onClick={this.liftState} menuItemClassName={this.props.menuItemClassName}/>
-                            </div> : null}
-                    </ReactCSSTransitionGroup>
+                                <Navigation stateFromChild={this.setHomeState}
+                                            menuItemClassName={this.props.menuItemClassName}/>
+                            </main>
+                        </div>
+                        {/*</ReactCSSTransitionGroup>*/}
+                    </div>
                 </div>
             </div>);
     }

@@ -1,0 +1,35 @@
+/*preview*/
+.mainContainer {
+  z-index: 0;
+  .description{
+    width:66%;
+    p{
+      text-align: center;
+    }
+  }
+}
+
+/*large component*/
+.fullScreenContainer {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.fullScreenContainer__innerContainer {
+  -webkit-border-image: -webkit-linear-gradient(45deg, #57e57f 0%, #f45f43 100%);
+  border-image: -webkit-linear-gradient(45deg, #57e57f 0%, #f45f43 100%);
+  border-image: linear-gradient(45deg, #57e57f 0%, #f45f43 100%);
+  border-style: solid;
+  border-width: 4px;
+  border-image-slice: 1;
+  max-width: 800px;
+  background: rgb(35, 35, 35);
+}

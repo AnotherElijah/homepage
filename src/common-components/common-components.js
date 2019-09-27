@@ -5,21 +5,29 @@ function Header(props) {
     return (
         <header className={props.headerClass}>
             <div className="filter header-inner">
-                <div className="about-head-wrapper">
-                    <ReactCSSTransitionGroup
-                        transitionName="example"
-                        transitionAppear={true}
-                        transitionAppearTimeout={1000}
-                        transitionEnter={true}
-                        transitionEnterTimeout={0}
-                        transitionLeaveTimeout={0}
-                        transitionLeave={true}>
-                        <h1 key="1" className="about-head__main-header">{props.txtHeader}</h1>
-                    </ReactCSSTransitionGroup>
+                <div className="head-wrapper">
+                    <h1 key="1" className="head__main-header">{props.txtHeader}</h1>
                 </div>
             </div>
         </header>
     )
 }
-
-export {Header};
+function Transition({direction, nestedElem, wrapperNumber, flag, ...other}) {
+    return (
+        <div className={"block-border" + wrapperNumber + direction} id={other.id}>
+            <ReactCSSTransitionGroup
+                component="div"
+                className={"block"}
+                transitionName={"txtBlockAnimation-" + direction}
+                transitionAppear={true}
+                transitionAppearTimeout={500}
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={300}
+                transitionEnter={true}
+                transitionLeave={true}>
+                {flag === true ? nestedElem : null}
+            </ReactCSSTransitionGroup>
+        </div>
+    )
+}
+export {Header, Transition};

@@ -2,3 +2,9 @@
   margin:0;
   padding:0;
 }
+html { height: 100%; overflow:auto; }
+body { height: 100%; }
+h1{font-size: 42px;}
+.works-head .head__main-header{
+  font-size: 42px;
+}

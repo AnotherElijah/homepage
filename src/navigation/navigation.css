@@ -8,14 +8,15 @@
 .top-navigation-wrapper {
   position: absolute;
   width: 100%;
-  height: 200px;
+  height: auto;
   display: flex;
   flex-direction: row;
-  justify-content: center; }
+  justify-content: flex-end; }
   .top-navigation-wrapper ul.navigation {
-    width: 66%;
+    width: 33%;
     display: flex;
-    justify-content: space-around; }
+    justify-content: space-around;
+    height: 40px; }
   .top-navigation-wrapper .top-nav__items.top-nav__item-.home-nav,
   .top-navigation-wrapper .top-nav__items.top-nav__item-0,
   .top-navigation-wrapper .top-nav__items.top-nav__item-1,
@@ -28,8 +29,13 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
-  padding: 60px 0; }
+  width: 100%; }
+  .navigation a {
+    cursor: pointer; }
+  @media screen and (max-width: 490px) {
+    .navigation {
+      flex-direction: row;
+      flex-wrap: wrap; } }
 
 .nav__items {
   list-style: none;
@@ -38,14 +44,12 @@
   width: 170px;
   height: 170px;
   border-radius: 150px;
-  border: solid 2px #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #ffffff;
   font-family: 'Rubik', 'Lato', sans-serif;
-  font-size: 30px;
   white-space: nowrap;
   font-weight: 900; }
   @media screen and (max-width: 1700px) {
@@ -58,5 +62,54 @@
       width: 120px;
       height: 120px;
       font-size: 20px; } }
+  @media screen and (max-width: 1000px) {
+    .nav__items {
+      width: 120px;
+      height: 120px;
+      margin: 15px 30px; } }
+
+/**fixed-menu**/
+.fixed-menu-logo {
+  display: none; }
+
+#fixed-menu {
+  transition: background 500ms ease-in;
+  display: flex;
+  position: fixed;
+  justify-content: flex-end;
+  width: 100%;
+  background: rgba(47, 34, 74, 0.67);
+  z-index: 10;
+  padding: 15px 15px; }
+  #fixed-menu .fixed-menu-logo {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 66px;
+    width: 45px; }
+  #fixed-menu img {
+    position: absolute;
+    width: 66px; }
+  #fixed-menu li {
+    display: inline-block;
+    padding: 0 45px; }
+
+.navigation.about,
+.navigation.works,
+.navigation.contact {
+  padding: 45px 0 0; }
+  .navigation.about li,
+  .navigation.works li,
+  .navigation.contact li {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+
+.navigation.about li a,
+.navigation.works li a,
+.navigation.contact li a {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff; }
 
 /*# sourceMappingURL=navigation.css.map */

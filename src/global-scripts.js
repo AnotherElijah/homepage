@@ -7,7 +7,6 @@ function getItemState (state_, lift) {
     lift(state_)
 }
 const changesInfo = (prevProps, prevState) => {
-    alert("changesInfo");
     /*rerender information*/
     Object.entries(this.props).forEach(([key, val]) =>
         prevProps[key] !== val && console.log(`Prop '${key}' changed`)
@@ -18,7 +17,6 @@ const changesInfo = (prevProps, prevState) => {
 }
 
 function liftState(state_, lift) {
-    console.log("`about` liftstate");
     this.setState({position: state_});
 };
 

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e07c1200-77b4-4211-a08e-7d377f2855dc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/contact/img/whatsapp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/img/logo-white.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/works/img/GitHub-Mark-64px.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/about/about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about/about.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/about/about.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/about/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about/about.scss" beforeDir="false" afterPath="$PROJECT_DIR$/about/about.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canvas/assets/leaf-0.png" beforeDir="false" afterPath="$PROJECT_DIR$/canvas/assets/leaf-0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canvas/assets/leaf-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/canvas/assets/leaf-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canvas/assets/leaf-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/canvas/assets/leaf-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canvas/assets/leaf-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/canvas/assets/leaf-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canvas/canvas-bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/canvas/canvas-bg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-components/common-components.js" beforeDir="false" afterPath="$PROJECT_DIR$/common-components/common-components.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global-scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/global-scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/growing-block/growing-block.js" beforeDir="false" afterPath="$PROJECT_DIR$/growing-block/growing-block.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/home.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/home/home.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/home/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/home/home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/img/black-white/bamboo-143366_1920.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/home/img/black-white/bamboo-143366_1920.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/img/black-white/black-2398958_1920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/img/black-white/departure-platform-371218_1920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/img/black-white/puffin-2781549_1920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/img/bubbles-2787682_1920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/img/cd-2319120_1920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/img/cd-2319153_1920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/img/color-1328292_1920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/img/spectrum-2634121_1920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/img/swirl-2490252_1920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/img/wall-2640737_1920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/img/water-885965_1920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/img/woman-2548162_1920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/navigation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/navigation.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/navigation.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/navigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/works/works.css" beforeDir="false" afterPath="$PROJECT_DIR$/works/works.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/works/works.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/works/works.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/works/works.js" beforeDir="false" afterPath="$PROJECT_DIR$/works/works.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/works/works.scss" beforeDir="false" afterPath="$PROJECT_DIR$/works/works.scss" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1912" />
+    <option name="y" value="-490" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e07c1200-77b4-4211-a08e-7d377f2855dc" name="Default Changelist" comment="" />
+      <created>1569616771271</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569616771271</updated>
+      <workItem from="1569616772465" duration="14000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="14000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-490" width="1936" height="1056" extended-state="7" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

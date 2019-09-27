@@ -1,15 +1,15 @@
 import React from 'react';
 
-const GrowingBlockTxt = ({growingBlockH, growingBlockP}) => {
+const GrowingBlockTxt = ({header, body}) => {
     return (<div className="txt-block">
-        <h3>{growingBlockH}</h3>
-        <p>{growingBlockP}</p>
+        <h3>{header}</h3>
+        <section>{body}</section>
     </div>)
 };
 const GrowingBlock = ({clName, header, paragraph}) => {
     return (<div className={clName + "-wrapper"}>
         <div className={clName}>
-            <GrowingBlockTxt growingBlockH = {header} growingBlockP = {paragraph}/>
+            <GrowingBlockTxt header = {header} body = {paragraph}/>
         </div>
     </div>)
 };

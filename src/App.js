@@ -1,70 +1,99 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {Home} from './home/home';
 import {About} from "./about/about";
 import {Works} from "./works/works";
+import {Contact} from "./contact/contact";
 import './about/about';
 import './App.css';
 import './reset.css';
-
+import {CanvasBg} from "./canvas/canvas-bg";
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-
 class App extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
-        this.state={
-            state:"home"
+        this.state = {
+            appState: "home"
         }
         this.setState = this.setState.bind(this);
-        this.changeState = this.changeState.bind(this);
-    }
-    componentDidMount(){
+        this.setGeneralState = this.setGeneralState.bind(this);
 
-        /*redirect on first load according to hash*/
-        this.changeFirstState()
     }
-    changeFirstState(){
+
+    componentDidMount() {
+        /*redirect on first load according to hash*/
+        this.changeFirstState();
+
+        document.onmouseover = function() {
+            //User's mouse is inside the page.
+            window.innerDocClick = true;
+        };
+        document.onmouseleave = function() {
+            //User's mouse has left the page.
+            window.innerDocClick = false;
+        };
+        window.onhashchange = function() {
+            if (!window.innerDocClick) {
+                window.location.reload()
+            }
+        };
+    }
+
+    changeFirstState() {
         /*if hash is not about, works, contact, then no redirects*/
-        switch(window.location.hash){
+        switch (window.location.hash) {
             case "#about":
-                this.setState({state:"about"})
+                this.setState({appState: "about"});
                 break;
             case "#works":
-                this.setState({state:"works"})
+                this.setState({appState: "works"});
                 break;
             case "#contact":
-                this.setState({state:"contact"})
+                this.setState({appState: "contact"});
                 break;
 
         }
     }
-    urlOperations(hash_="home"){
+
+    urlOperations(hash_ = "home") {
         window.location.hash = hash_;
     };
 
-    /*change state, then change hash*/
-    changeState(state_){
+    /*change appState, then change hash*/
+    setGeneralState(state_) {
         this.urlOperations(state_);
-        this.setState({state:state_});
+        this.setState({appState: state_});
     }
-  render() {
-        console.log("`App` rerendering");
-    return (
-        <>
-        {this.state.state === "home"?
-            <Home changeState={this.changeState} menuItemClassName={this.state.state==="home"?"nav__items nav__item-":null}/>
-            :this.state.state === "about"?
-                <About
-                    changeState={this.changeState}
-                    menuItemClassName="top-nav__items top-nav__item-"
-                    txtHeader="— Let me tell you about myself"/>
-                :this.state.state === "works"?<Works
-                    changeState={this.changeState}/>:null
-            }
+    render() {
 
-        </>
-    );
-  }
+        return (
+            <>
+            {this.state.appState === "home" ?
+                <Home setGeneralState={this.setGeneralState}
+                      menuItemClassName={this.state.appState === "home" ? "nav__items nav__item-" : null}/>
+                : this.state.appState === "about" ?
+                    <About
+                        setGeneralState={this.setGeneralState}
+                        menuItemClassName="top-nav__items top-nav__item-"
+                        txtHeader="About me and my skills"/>
+                    : this.state.appState === "works" ?
+                        <Works
+                        setGeneralState={this.setGeneralState}
+                        menuItemClassName="top-nav__items top-nav__item-"
+                        txtHeader="— Let me tell you about myself"/>
+                        : this.state.appState === "contact" &&
+                            <Contact
+                                setGeneralState={this.setGeneralState}
+                                menuItemClassName="top-nav__items top-nav__item-"
+                                txtHeader="— Let me tell you about myself"/>
+            }
+{/*
+            <CanvasBg className = 'home' appState='home'/>
+*/}
+            {this.state.appState !== "home" && <CanvasBg className = {this.state.appState} appState={this.state.appState}/>}
+            </>
+        );
+    }
 }
 
 export default App;
